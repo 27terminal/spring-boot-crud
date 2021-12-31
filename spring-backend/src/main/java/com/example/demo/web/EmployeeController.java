@@ -56,4 +56,32 @@ public class EmployeeController {
         employeeService.deleteEmployee(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+    
+    @GetMapping("/test1")
+    public ResponseEntity<String> testMethod1(){
+    	int x =100, y = 0;
+    	try {
+    		int total = x/y;
+    		System.out.println(total);
+    		String res = "final result " + total;
+    		return new ResponseEntity<>(res, HttpStatus.OK);		
+    	}catch (Exception e) {
+			// TODO: handle exception
+    		return new ResponseEntity<>(e.getMessage(), HttpStatus.OK);
+		}
+    }
+    
+    @GetMapping("/test2")
+    public ResponseEntity<String> testMethod2(){
+    	int x =100, y = 0;
+    	try {
+    		int total = x/y;
+    		System.out.println(total);
+    		String res = "final result " + total;
+    		return new ResponseEntity<>(res, HttpStatus.OK);		
+    	}catch (Exception e) {
+			// TODO: handle exception
+    		return new ResponseEntity<>(e.getMessage(), HttpStatus.OK);
+		}
+    }
 }
